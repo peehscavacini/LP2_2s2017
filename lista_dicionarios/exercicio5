@@ -1,0 +1,41 @@
+agenda = {
+    
+    'nome': ['yasmin','bruno','pedro','mariana','henrique','nayara'],
+    'email': [],
+    'telefone': [],
+    'endereco': []
+}
+
+
+a = 1
+while a:
+    menu = int(input("1 - Inserir 2 - Remover 3 - Pesquisar 4 - Sair"))
+    if menu == 1:
+        nome = input("Digite o nome:")
+        email = input("Digite o email:")
+        telefone = input("Digite o telefone:")
+        endereco = input("Digite o endereco:")
+        agenda['nome'] = ['email', 'telefone', 'endereco']
+    elif menu == 2:
+        nome = input("Digite o nome a ser apagado:")
+        existe = 'nome' in agenda
+        del agenda['nome']
+        
+    else:
+        item = agenda.get("Não existe")
+        print(item)
+        
+    if menu == 3:
+        nome = input("Digite o nome:")
+    elif nome in agenda:
+        existe = 'nome' in agenda
+        print(existe)
+    else:
+        print("Nome nao existe na agenda")         
+    
+i=0
+for i in agenda:
+    if menu == 1 or 2 or 3:
+        print(agenda)
+    elif menu == 4: 
+        print("Sair")
